@@ -1,4 +1,4 @@
-"""reads the document provided and adds to vector database with embeddings"""
+"""Reads the document provided and adds to vector database with embeddings"""
 
 import argparse
 import os
