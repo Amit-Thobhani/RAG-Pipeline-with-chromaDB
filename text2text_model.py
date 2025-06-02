@@ -6,7 +6,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
 TEXT_GENERATION_MODEL = "google/flan-t5-xl"
 
 
-def load_qa_model(model_name=TEXT_GENERATION_MODEL, device='cpu'):
+def load_qa_model(model_name: str = TEXT_GENERATION_MODEL, device: str = 'cpu'):
     """
     Load model and tokenizer for question answering.
     """
