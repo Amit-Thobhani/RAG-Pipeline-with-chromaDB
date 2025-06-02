@@ -27,15 +27,17 @@ The notebook demonstrates:
 ## 📦 Requirements
 
 Install dependencies with:
-
+```
 pip install transformers chromadb sentence-transformers langchain langchain-community pypdf
-
+```
 
 ## 📝 Example Query
-
+```
 query_text = "Rules for defining python variables"
 
 run_rag_pipeline(query_text, config)
-
+```
 ### 💬 Output
+```
 "Variable names may contain upper-case and lowercase letters (A–Z, a–z), digits (0–9), and underscores (_), but they cannot begin with a digit"
+```
