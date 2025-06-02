@@ -20,7 +20,8 @@ Learn following context for Quenstion Answer:
 Using knowledge of above context answer: {question}
 """
 
-def load_config(device=DEVICE, model_name=TEXT_GENERATION_MODEL):
+
+def load_config(device: str = DEVICE, model_name: str = TEXT_GENERATION_MODEL):
     config = {}
     config['device'] = device
     # # >> load embedings, tokenizer and model
@@ -33,10 +34,9 @@ def load_config(device=DEVICE, model_name=TEXT_GENERATION_MODEL):
     config['db'] = db
     
     return config
+
     
-    
-    
-def run_rag_pipeline(query_text, config):
+def run_rag_pipeline(query_text: str, config: dict):
     
     # # >> get relevant documents
     results = config['db'].similarity_search_with_score(query_text, k=1)
@@ -51,8 +51,8 @@ def run_rag_pipeline(query_text, config):
     
     return config['tokenizer'].decode(outputs[0], skip_special_tokens=True)
 
+
 if __name__ == "__main__":
     config = load_config(device='cpu')
     query_text = input("Ask question related documents")
     print(run_rag_pipeline(query_text))
-
