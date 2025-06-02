@@ -13,6 +13,7 @@ from langchain_community.vectorstores.chroma import Chroma
 DATA_DIR = "./data"
 CHROMA_DIR = "./langchain_chroma_db"
 
+
 def load_documents(data_dir: str = DATA_DIR) -> list:
     """
     Loads the documents from input data_dir directory
@@ -35,7 +36,7 @@ def split_documents(documents: list) -> list:
     return text_splitter.split_documents(documents)
 
 
-def create_chunk_ids(split_chunks: list):
+def create_chunk_ids(split_chunks: list) -> list:
     """
     Create unique chunks id for database
     """
